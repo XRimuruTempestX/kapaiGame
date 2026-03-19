@@ -1,0 +1,15 @@
+{
+  "WorkspacePath": "E:\\Unity_G_Project\\kapai\\Server\\KapaiGame\\Tools\\NetworkProtocol\\",
+  "OpenedTabs": [
+    {
+      "FilePath": "导出设置",
+      "CaretOffset": 0,
+      "EditorType": 2
+    }
+  ],
+  "ActiveTabFilePath": "导出设置",
+  "serverOutputDirectory": "E:\\Unity_G_Project\\kapai\\Server\\kapaiGame\\Server\\Entity",
+  "clientOutputDirectory": "E:\\Unity_G_Project\\kapai\\Assets\\HotScrpts\\Protobuf",
+  "exportToServer": true,
+  "exportToClient": true
+}

@@ -142,6 +142,16 @@
         "com.unity.render-pipelines.core": "17.0.3"
       }
     },
+    "com.unity.scriptablebuildpipeline": {
+      "version": "2.5.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.4.5",
+        "com.unity.modules.assetbundle": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.searcher": {
       "version": "4.9.4",
       "depth": 2,
@@ -208,6 +218,15 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.xlh.xlhpackage": {
+      "version": "git@github.com:XRimuruTempestX/XLHFrameWork.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.scriptablebuildpipeline": "2.4.3"
+      },
+      "hash": "06dc44e4ebf2928bdb5c9f6a08168d8564af9940"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

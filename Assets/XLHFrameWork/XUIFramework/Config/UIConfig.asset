@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4ba308077191643ae2759ed36c919a, type: 3}
+  m_Name: UIConfig
+  m_EditorClassIdentifier: XUIFramework::XUIFramework.UIConfig
+  UISavePath: Assets/GameData/HallWorld/Window
+  uiList:
+  - uiPrefab: {fileID: 5579191096139181630, guid: 6cec4dd0fa975624bb3c083130bd8337, type: 3}
+    uiName: ChoosFormationWindow
+    assetPath: Assets/GameData/HallWorld/Window/ChoosFormationWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 3799153256284689408, guid: 10f4670d1f3668a448a8d43d80e642b2, type: 3}
+    uiName: CreateUserWindow
+    assetPath: Assets/GameData/HallWorld/Window/CreateUserWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 3475569712157740005, guid: 082da79f8327d5d48a2ea64ab088be6b, type: 3}
+    uiName: GetHeroWindow
+    assetPath: Assets/GameData/HallWorld/Window/GetHeroWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 3370918903753290913, guid: 3bc5108660e3d84489a3d74d31dcf493, type: 3}
+    uiName: GlobalClickWindow
+    assetPath: Assets/GameData/HallWorld/Window/GlobalClickWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 7567863680175729285, guid: 8e1b8256ea9a1c646a3a4e4a37ca565a, type: 3}
+    uiName: HallButtonsWidow
+    assetPath: Assets/GameData/HallWorld/Window/HallButtonsWidow.prefab
+    description: 
+  - uiPrefab: {fileID: 7783176757619198297, guid: 195e407448d181c4db31d50897e7c26a, type: 3}
+    uiName: HallWindow
+    assetPath: Assets/GameData/HallWorld/Window/HallWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 553640202414554245, guid: 9894ce4396503b84f894ad471d14c045, type: 3}
+    uiName: HeroListWindow
+    assetPath: Assets/GameData/HallWorld/Window/HeroListWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 6689193994065342057, guid: 3a66ed09f7dc4ae49a9e42717924718d, type: 3}
+    uiName: LevelDisplayWindow
+    assetPath: Assets/GameData/HallWorld/Window/LevelDisplayWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 541993666440055612, guid: 5b40207de8d73254e9aecf56644fca1a, type: 3}
+    uiName: LevelReplayWindow
+    assetPath: Assets/GameData/HallWorld/Window/LevelReplayWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 7897298436780367468, guid: e75d4791f0857224b88abfa3a3e56347, type: 3}
+    uiName: LevelWindow
+    assetPath: Assets/GameData/HallWorld/Window/LevelWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 8831269322465339037, guid: 1a2cdb84efb180449800c1f7096e0362, type: 3}
+    uiName: LoadingWindow
+    assetPath: Assets/GameData/HallWorld/Window/LoadingWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 6570916659602027524, guid: c1dd61a4041ba644bb098f8d430b9aed, type: 3}
+    uiName: LoginWindow
+    assetPath: Assets/GameData/HallWorld/Window/LoginWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 2679265738818995868, guid: 12244ae680b790d4bb45e4058e85404b, type: 3}
+    uiName: RecruitWindow
+    assetPath: Assets/GameData/HallWorld/Window/RecruitWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 3368489427723536768, guid: 7bc46d525a3d1414c807c0449cde4ecf, type: 3}
+    uiName: RegisterWindow
+    assetPath: Assets/GameData/HallWorld/Window/RegisterWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 1977246831308698408, guid: b32f96cc465f1b345abc5dcea5de3406, type: 3}
+    uiName: SelectWindow
+    assetPath: Assets/GameData/HallWorld/Window/SelectWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 3700720547558647004, guid: 3e09e33e4595d964fb09546333c09b13, type: 3}
+    uiName: TenRecruitWindow
+    assetPath: Assets/GameData/HallWorld/Window/TenRecruitWindow.prefab
+    description: 
+  - uiPrefab: {fileID: 7047141361470560360, guid: ea73f04ccb122d348ba8fc0239632c14, type: 3}
+    uiName: Toast
+    assetPath: Assets/GameData/HallWorld/Window/Toast.prefab
+    description: 

@@ -845,8 +845,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RegisterWindowComponent
   Btn_Register: {fileID: 1763780952301848252}
   Btn_Back: {fileID: 7756871787121822984}
-  Input_Account: {fileID: 0}
-  Input_Password: {fileID: 0}
+  Input_Account: {fileID: 1984699192053971244}
+  Input_Password: {fileID: 4833014546078742043}
 --- !u!1 &3519103522061860219
 GameObject:
   m_ObjectHideFlags: 0

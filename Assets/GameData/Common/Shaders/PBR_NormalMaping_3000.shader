@@ -36,7 +36,7 @@ Shader "MS/PBR_NormalMaping_3000"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			

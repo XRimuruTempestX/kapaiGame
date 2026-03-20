@@ -174,6 +174,123 @@ Shader "MS/PBR_NormalMaping"
 			}
 			ENDCG
 		}
+		Pass
+		{
+			Name "URPOutline"
+			Tags { "LightMode"="SRPDefaultUnlit" }
+			Cull Front
+			
+			HLSLPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+
+			struct Attributes
+			{
+				float4 positionOS : POSITION;
+				float3 normalOS : NORMAL;
+			};
+
+			struct Varyings
+			{
+				float4 positionCS : SV_POSITION;
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+				float4 _ASEOutlineColor;
+				float _ASEOutlineWidth;
+				float4 _Color0;
+				float _HightLight;
+				float4 _MainTex_ST;
+				float4 _ao_ST;
+			CBUFFER_END
+
+			Varyings vert(Attributes input)
+			{
+				Varyings output;
+				float3 posOS = input.positionOS.xyz + input.normalOS * _ASEOutlineWidth;
+				output.positionCS = TransformObjectToHClip(posOS);
+				return output;
+			}
+
+			half4 frag(Varyings input) : SV_Target
+			{
+				return _ASEOutlineColor;
+			}
+			ENDHLSL
+		}
+
+		Pass
+		{
+			Name "UniversalForward"
+			Tags { "LightMode"="UniversalForward" }
+			Cull Back
+			
+			HLSLPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+
+			struct Attributes
+			{
+				float4 positionOS : POSITION;
+				float3 normalOS : NORMAL;
+				float2 uv : TEXCOORD0;
+				float2 uv2 : TEXCOORD1;
+			};
+
+			struct Varyings
+			{
+				float4 positionCS : SV_POSITION;
+				float3 normalWS : TEXCOORD0;
+				float2 uv : TEXCOORD1;
+				float2 uv2 : TEXCOORD2;
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+				float4 _ASEOutlineColor;
+				float _ASEOutlineWidth;
+				float4 _Color0;
+				float _HightLight;
+				float4 _MainTex_ST;
+				float4 _ao_ST;
+			CBUFFER_END
+
+			TEXTURE2D(_Matcap); SAMPLER(sampler_Matcap);
+			TEXTURE2D(_MainTex); SAMPLER(sampler_MainTex);
+			TEXTURE2D(_ao); SAMPLER(sampler_ao);
+
+			Varyings vert(Attributes input)
+			{
+				Varyings output;
+				output.positionCS = TransformObjectToHClip(input.positionOS.xyz);
+				output.normalWS = TransformObjectToWorldNormal(input.normalOS);
+				output.uv = input.uv;
+				output.uv2 = input.uv2;
+				return output;
+			}
+
+			half4 frag(Varyings input) : SV_Target
+			{
+				float3 normalWS = normalize(input.normalWS);
+				float3 viewNormal = mul((float3x3)GetWorldToViewMatrix(), normalWS);
+				float2 matcapUV = viewNormal.xy * 0.5 + 0.5;
+				
+				float hl = 1.0 + _HightLight * 5.0;
+				
+				half4 matcapColor = SAMPLE_TEXTURE2D(_Matcap, sampler_Matcap, matcapUV);
+				half4 mainColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
+				half aoR = SAMPLE_TEXTURE2D(_ao, sampler_ao, input.uv2).r;
+				
+				half4 val = matcapColor * hl * mainColor * aoR;
+				
+				half aoG = SAMPLE_TEXTURE2D(_ao, sampler_ao, input.uv).g;
+				
+				half4 finalColor = lerp(val, _Color0, aoG);
+				return half4(finalColor.rgb, 1.0);
+			}
+			ENDHLSL
+		}
 	}
 	Fallback "Diffuse"
 	CustomEditor "ASEMaterialInspector"

@@ -39,12 +39,12 @@ Shader "X1_UI_ColorChange"
 			ZFailBack Keep
 		}
 		
-		GrabPass{ }
+		// GrabPass{ }
 
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			#if defined(UNITY_STEREO_INSTANCING_ENABLED) || defined(UNITY_STEREO_MULTIVIEW_ENABLED)
@@ -86,7 +86,7 @@ Shader "X1_UI_ColorChange"
 
 			uniform float _stencil;
 			uniform float4 _Color;
-			ASE_DECLARE_SCREENSPACE_TEXTURE( _GrabTexture )
+			ASE_DECLARE_SCREENSPACE_TEXTURE( _CameraOpaqueTexture )
 			inline float4 ASE_ComputeGrabScreenPos( float4 pos )
 			{
 				#if UNITY_UV_STARTS_AT_TOP
@@ -143,7 +143,7 @@ Shader "X1_UI_ColorChange"
 				float4 screenPos = i.ase_texcoord1;
 				float4 ase_grabScreenPos = ASE_ComputeGrabScreenPos( screenPos );
 				float4 ase_grabScreenPosNorm = ase_grabScreenPos / ase_grabScreenPos.w;
-				float4 screenColor147 = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_GrabTexture,ase_grabScreenPosNorm.xy);
+				float4 screenColor147 = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_CameraOpaqueTexture,ase_grabScreenPosNorm.xy);
 				
 				
 				finalColor = ( _Color * screenColor147 * i.ase_color );

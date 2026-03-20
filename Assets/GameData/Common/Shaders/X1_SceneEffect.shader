@@ -40,7 +40,7 @@ Shader "X1/SceneEffect"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			#define ASE_ABSOLUTE_VERTEX_POS 1

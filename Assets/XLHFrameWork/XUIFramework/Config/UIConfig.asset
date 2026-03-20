@@ -30,11 +30,11 @@ MonoBehaviour:
     uiName: GlobalClickWindow
     assetPath: Assets/GameData/HallWorld/Window/GlobalClickWindow.prefab
     description: 
-  - uiPrefab: {fileID: 7567863680175729285, guid: 8e1b8256ea9a1c646a3a4e4a37ca565a, type: 3}
+  - uiPrefab: {fileID: 4994704525474207976, guid: 8e1b8256ea9a1c646a3a4e4a37ca565a, type: 3}
     uiName: HallButtonsWidow
     assetPath: Assets/GameData/HallWorld/Window/HallButtonsWidow.prefab
     description: 
-  - uiPrefab: {fileID: 7783176757619198297, guid: 195e407448d181c4db31d50897e7c26a, type: 3}
+  - uiPrefab: {fileID: 3285275332774877897, guid: 195e407448d181c4db31d50897e7c26a, type: 3}
     uiName: HallWindow
     assetPath: Assets/GameData/HallWorld/Window/HallWindow.prefab
     description: 
@@ -62,7 +62,7 @@ MonoBehaviour:
     uiName: LoginWindow
     assetPath: Assets/GameData/HallWorld/Window/LoginWindow.prefab
     description: 
-  - uiPrefab: {fileID: 2679265738818995868, guid: 12244ae680b790d4bb45e4058e85404b, type: 3}
+  - uiPrefab: {fileID: 1103019711138554132, guid: 8c84e0fe14be9c54ab09b5fc6d3411e0, type: 3}
     uiName: RecruitWindow
     assetPath: Assets/GameData/HallWorld/Window/RecruitWindow.prefab
     description: 

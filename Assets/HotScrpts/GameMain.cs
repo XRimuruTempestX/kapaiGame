@@ -10,6 +10,7 @@ public class GameMain : MonoBehaviour
     async void Start()
     {
        await XAssetFrameWork.Instance.InitlizateResAsync(BundleModuleEnum.GameArt.ToString());
+       Debuger.InitLog();
        UIManager.Instance.OnInit();
        WorldManager.CreateWorld<HallWorld.HallWorld>();
        await UIManager.Instance.OpenWindowAsync<LoginWindow>();

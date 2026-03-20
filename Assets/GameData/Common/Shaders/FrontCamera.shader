@@ -33,12 +33,12 @@ Shader "FrontCamera"
 		Offset 0 , 0
 		
 		
-		GrabPass{ }
+		// GrabPass{ }
 
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			#if defined(UNITY_STEREO_INSTANCING_ENABLED) || defined(UNITY_STEREO_MULTIVIEW_ENABLED)
@@ -81,7 +81,7 @@ Shader "FrontCamera"
 
 			uniform sampler2D _TestTEX;
 			uniform float2 _center;
-			ASE_DECLARE_SCREENSPACE_TEXTURE( _GrabTexture )
+			ASE_DECLARE_SCREENSPACE_TEXTURE( _CameraOpaqueTexture )
 			uniform float _scale;
 			uniform float _moveX;
 			uniform float _moveY;
@@ -152,7 +152,7 @@ Shader "FrontCamera"
 				float2 appendResult16 = (float2(staticSwitch43 , (( 1.0 - temp_output_47_0 ) + (_center.y - 0.0) * (temp_output_47_0 - ( 1.0 - temp_output_47_0 )) / (1.0 - 0.0))));
 				float2 appendResult21 = (float2(_moveX , _moveY));
 				float2 appendResult36 = (float2(1.0 , W_H28));
-				float4 screenColor2 = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_GrabTexture,( ( ( ase_grabScreenPosNorm + float4( -appendResult16, 0.0 , 0.0 ) ) * _scale ) + float4( appendResult16, 0.0 , 0.0 ) + float4( ( appendResult21 * appendResult36 ), 0.0 , 0.0 ) ).xy);
+				float4 screenColor2 = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_CameraOpaqueTexture,( ( ( ase_grabScreenPosNorm + float4( -appendResult16, 0.0 , 0.0 ) ) * _scale ) + float4( appendResult16, 0.0 , 0.0 ) + float4( ( appendResult21 * appendResult36 ), 0.0 , 0.0 ) ).xy);
 				
 				
 				finalColor = ( tex2D( _TestTEX, ( float4( appendResult53, 0.0 , 0.0 ) + ase_grabScreenPosNorm ).xy ) + ( screenColor2 * _Color ) );

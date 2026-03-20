@@ -151,4 +151,237 @@ namespace Fantasy
         [ProtoMember(2)]
         public string Tag { get; set; }
     }
+    [Serializable]
+    [ProtoContract]
+    public partial class C2A_RegisterAccountRequest : AMessage, IRequest
+    {
+        public static C2A_RegisterAccountRequest Create(bool autoReturn = true)
+        {
+            var c2A_RegisterAccountRequest = MessageObjectPool<C2A_RegisterAccountRequest>.Rent();
+            c2A_RegisterAccountRequest.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                c2A_RegisterAccountRequest.SetIsPool(false);
+            }
+            
+            return c2A_RegisterAccountRequest;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            account = default;
+            passWord = default;
+            MessageObjectPool<C2A_RegisterAccountRequest>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.C2A_RegisterAccountRequest; } 
+        [ProtoIgnore]
+        public A2C_RegisterAccountResponse ResponseType { get; set; }
+        [ProtoMember(1)]
+        public string account { get; set; }
+        [ProtoMember(2)]
+        public string passWord { get; set; }
+    }
+    [Serializable]
+    [ProtoContract]
+    public partial class A2C_RegisterAccountResponse : AMessage, IResponse
+    {
+        public static A2C_RegisterAccountResponse Create(bool autoReturn = true)
+        {
+            var a2C_RegisterAccountResponse = MessageObjectPool<A2C_RegisterAccountResponse>.Rent();
+            a2C_RegisterAccountResponse.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                a2C_RegisterAccountResponse.SetIsPool(false);
+            }
+            
+            return a2C_RegisterAccountResponse;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            ErrorCode = 0;
+            userId = default;
+            account = default;
+            passWord = default;
+            MessageObjectPool<A2C_RegisterAccountResponse>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.A2C_RegisterAccountResponse; } 
+        [ProtoMember(1)]
+        public uint ErrorCode { get; set; }
+        [ProtoMember(2)]
+        public long userId { get; set; }
+        [ProtoMember(3)]
+        public string account { get; set; }
+        [ProtoMember(4)]
+        public string passWord { get; set; }
+    }
+    [Serializable]
+    [ProtoContract]
+    public partial class C2A_LoginRequest : AMessage, IRequest
+    {
+        public static C2A_LoginRequest Create(bool autoReturn = true)
+        {
+            var c2A_LoginRequest = MessageObjectPool<C2A_LoginRequest>.Rent();
+            c2A_LoginRequest.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                c2A_LoginRequest.SetIsPool(false);
+            }
+            
+            return c2A_LoginRequest;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            account = default;
+            passWprd = default;
+            MessageObjectPool<C2A_LoginRequest>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.C2A_LoginRequest; } 
+        [ProtoIgnore]
+        public A2C_LoginResponse ResponseType { get; set; }
+        [ProtoMember(1)]
+        public string account { get; set; }
+        [ProtoMember(2)]
+        public string passWprd { get; set; }
+    }
+    [Serializable]
+    [ProtoContract]
+    public partial class A2C_LoginResponse : AMessage, IResponse
+    {
+        public static A2C_LoginResponse Create(bool autoReturn = true)
+        {
+            var a2C_LoginResponse = MessageObjectPool<A2C_LoginResponse>.Rent();
+            a2C_LoginResponse.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                a2C_LoginResponse.SetIsPool(false);
+            }
+            
+            return a2C_LoginResponse;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            ErrorCode = 0;
+            gateIp = default;
+            gatePor = default;
+            MessageObjectPool<A2C_LoginResponse>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.A2C_LoginResponse; } 
+        [ProtoMember(1)]
+        public uint ErrorCode { get; set; }
+        [ProtoMember(2)]
+        public string gateIp { get; set; }
+        [ProtoMember(3)]
+        public int gatePor { get; set; }
+    }
+    [Serializable]
+    [ProtoContract]
+    public partial class A2C_KickOut : AMessage, IMessage
+    {
+        public static A2C_KickOut Create(bool autoReturn = true)
+        {
+            var a2C_KickOut = MessageObjectPool<A2C_KickOut>.Rent();
+            a2C_KickOut.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                a2C_KickOut.SetIsPool(false);
+            }
+            
+            return a2C_KickOut;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            reason = default;
+            message = default;
+            MessageObjectPool<A2C_KickOut>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.A2C_KickOut; } 
+        [ProtoMember(1)]
+        public int reason { get; set; }
+        [ProtoMember(2)]
+        public string message { get; set; }
+    }
 }

@@ -44,7 +44,7 @@ Shader "MS/effect_alpha_flash"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			
@@ -182,9 +182,9 @@ Shader "MS/effect_alpha_flash"
 Version=18707
 -1061;313;1061;1082;203.8701;271.9957;1;True;False
 Node;AmplifyShaderEditor.CommentaryNode;51;-2092.192,-1675.32;Inherit;False;2184.617;540.2427;MainTex;14;130;129;128;127;126;125;44;54;37;2;53;52;140;143;主图;1,1,1,1;0;0
-Node;AmplifyShaderEditor.CommentaryNode;66;-594.5558,229.7383;Inherit;False;669.5709;420.2796;vertexColor;4;25;67;68;40;顶点色;1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;66;-594.5558,229.7383;Inherit;False;669.5709;420.2796;vertexColor;4;25;67;68;40;顶点�?1,1,1,1;0;0
 Node;AmplifyShaderEditor.ColorNode;2;-824.6144,-1343.511;Inherit;False;Property;_Color;Color;4;1;[HDR];Create;True;0;0;False;0;False;0,0,0,0;0,0,0,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.CommentaryNode;63;-1871.083,-378.937;Inherit;False;1948.578;530.9781;NoiseTex;8;3;64;87;88;89;90;91;93;遮罩图;1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;63;-1871.083,-378.937;Inherit;False;1948.578;530.9781;NoiseTex;8;3;64;87;88;89;90;91;93;遮罩�?1,1,1,1;0;0
 Node;AmplifyShaderEditor.ClampOpNode;143;-562.0504,-1266.188;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.VertexColorNode;25;-538.7739,343.8351;Inherit;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.CommentaryNode;71;187.7695,-414.9498;Inherit;False;2389.258;912.2151;Alpha;18;141;70;105;133;57;62;171;169;170;147;65;161;153;165;166;135;35;172;Alpha合成;1,1,1,1;0;0
@@ -196,7 +196,7 @@ Node;AmplifyShaderEditor.DynamicAppendNode;88;-1529.289,-232.6752;Inherit;False;
 Node;AmplifyShaderEditor.GetLocalVarNode;141;237.5447,356.912;Inherit;False;140;color_A;1;0;OBJECT;;False;1;FLOAT;0
 Node;AmplifyShaderEditor.GetLocalVarNode;70;218.8019,277.1077;Inherit;False;68;VertexColor_A;1;0;OBJECT;;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;35;208.3651,133.2405;Inherit;False;Property;_Alpha;Alpha;12;0;Create;True;0;0;False;0;False;0.55726;1;0;1;0;1;FLOAT;0
-Node;AmplifyShaderEditor.CommentaryNode;58;-1860.161,-1107.978;Inherit;False;1954.908;656.9279;NoiseTex;8;41;43;42;17;11;14;60;19;噪波图;1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;58;-1860.161,-1107.978;Inherit;False;1954.908;656.9279;NoiseTex;8;41;43;42;17;11;14;60;19;噪波�?1,1,1,1;0;0
 Node;AmplifyShaderEditor.RangedFloatNode;135;224.2512,-11.98696;Inherit;False;Property;_AlphaWdith;AlphaWdith;13;0;Create;True;0;0;False;0;False;0.3979152;1;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.Vector2Node;91;-1111.671,-188.9127;Inherit;False;Property;_MaskSpeed;MaskSpeed;10;0;Create;True;0;0;False;0;False;0,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.TextureCoordinatesNode;90;-1336.807,-281.5098;Inherit;False;1;-1;4;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4

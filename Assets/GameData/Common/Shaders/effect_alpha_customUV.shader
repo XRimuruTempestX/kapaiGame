@@ -49,7 +49,7 @@ Shader "MS/effect_alpha/custom_UV"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			

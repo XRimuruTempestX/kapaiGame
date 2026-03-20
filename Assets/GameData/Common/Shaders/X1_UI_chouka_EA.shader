@@ -41,7 +41,7 @@ Shader "X1_UI_chouka_EA"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			
@@ -171,12 +171,12 @@ Shader "X1_UI_chouka_EA"
 /*ASEBEGIN
 Version=18707
 -18;19;1340;270;1133.979;1267.23;1.977241;True;False
-Node;AmplifyShaderEditor.CommentaryNode;66;-594.5558,229.7383;Inherit;False;669.5709;420.2796;vertexColor;5;25;68;133;134;135;顶点色;1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;66;-594.5558,229.7383;Inherit;False;669.5709;420.2796;vertexColor;5;25;68;133;134;135;顶点�?1,1,1,1;0;0
 Node;AmplifyShaderEditor.VertexColorNode;25;-546.0418,373.9449;Inherit;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RegisterLocalVarNode;133;-191.7373,279.5148;Inherit;False;VertexColor_R;-1;True;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.CommentaryNode;51;-2092.192,-1675.32;Inherit;False;2184.617;540.2427;MainTex;12;130;128;127;126;125;44;54;37;2;55;53;52;主图;1,1,1,1;0;0
-Node;AmplifyShaderEditor.CommentaryNode;58;-1860.161,-1107.978;Inherit;False;1954.908;656.9279;NoiseTex;12;41;43;42;17;11;14;60;19;138;139;140;141;噪波图;1,1,1,1;0;0
-Node;AmplifyShaderEditor.CommentaryNode;63;-1871.083,-378.937;Inherit;False;1948.578;530.9781;NoiseTex;9;3;64;87;88;89;90;93;142;145;遮罩图;1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;58;-1860.161,-1107.978;Inherit;False;1954.908;656.9279;NoiseTex;12;41;43;42;17;11;14;60;19;138;139;140;141;噪波�?1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;63;-1871.083,-378.937;Inherit;False;1948.578;530.9781;NoiseTex;9;3;64;87;88;89;90;93;142;145;遮罩�?1,1,1,1;0;0
 Node;AmplifyShaderEditor.Vector4Node;87;-1784.289,-225.662;Inherit;False;Property;_Mask_Tiling_Offset;Mask_Tiling_Offset;9;0;Create;True;0;0;False;0;False;1,1,0,0;1,1.5,0,-0.25;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.Vector2Node;91;-1554.758,122.8901;Inherit;False;Property;_MaskSpeed;MaskSpeed;8;0;Create;True;0;0;False;0;False;0,1;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.GetLocalVarNode;145;-1560.764,29.61361;Inherit;False;133;VertexColor_R;1;0;OBJECT;;False;1;FLOAT;0

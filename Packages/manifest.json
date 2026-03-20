@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.code-philosophy.luban": "https://gitee.com/focus-creative-games/luban_unity.git",
     "com.fantasy.unity": "2026.0.1003",
     "com.unity.ai.navigation": "2.0.10",
     "com.unity.collab-proxy": "2.11.3",

@@ -32,6 +32,32 @@ namespace Fantasy
 			C2G_TestRequest_request.Tag = tag;
 			return (G2C_TestResponse)await session.Call(C2G_TestRequest_request);
 		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static async FTask<A2C_RegisterAccountResponse> C2A_RegisterAccountRequest(this Session session, C2A_RegisterAccountRequest C2A_RegisterAccountRequest_request)
+		{
+			return (A2C_RegisterAccountResponse)await session.Call(C2A_RegisterAccountRequest_request);
+		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static async FTask<A2C_RegisterAccountResponse> C2A_RegisterAccountRequest(this Session session, string account, string passWord)
+		{
+			using var C2A_RegisterAccountRequest_request = Fantasy.C2A_RegisterAccountRequest.Create();
+			C2A_RegisterAccountRequest_request.account = account;
+			C2A_RegisterAccountRequest_request.passWord = passWord;
+			return (A2C_RegisterAccountResponse)await session.Call(C2A_RegisterAccountRequest_request);
+		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static async FTask<A2C_LoginResponse> C2A_LoginRequest(this Session session, C2A_LoginRequest C2A_LoginRequest_request)
+		{
+			return (A2C_LoginResponse)await session.Call(C2A_LoginRequest_request);
+		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static async FTask<A2C_LoginResponse> C2A_LoginRequest(this Session session, string account, string passWprd)
+		{
+			using var C2A_LoginRequest_request = Fantasy.C2A_LoginRequest.Create();
+			C2A_LoginRequest_request.account = account;
+			C2A_LoginRequest_request.passWprd = passWprd;
+			return (A2C_LoginResponse)await session.Call(C2A_LoginRequest_request);
+		}
 
    }
 }

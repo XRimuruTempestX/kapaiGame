@@ -1,0 +1,31 @@
+using Fantasy;
+using Fantasy.Async;
+using UnityEngine;
+using XLHFramework.GCFrameWork.Base;
+
+namespace HallWorld
+{
+	public class LoginMessage : IMsgBehaviour
+	{
+		public void OnCreate()
+		{
+
+		}
+
+		/// <summary>
+		/// 发送注册请求
+		/// </summary>
+		/// <param name="username"></param>
+		/// <param name="password"></param>
+		/// <returns></returns>
+		public async FTask<A2C_RegisterAccountResponse> RegisterAccount(string username, string password)
+		{
+			return await Runtime.Session.C2A_RegisterAccountRequest(account:username, passWord : password);
+		}
+
+		public void OnDestroy()
+		{
+
+		}
+	}
+}

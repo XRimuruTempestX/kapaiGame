@@ -21,7 +21,7 @@ public partial class RegisterWindow : XUIBase
         // Auto Bind Listeners
         AddButtonListener(_view.Btn_Register, OnBtn_RegisterClick);
         AddButtonListener(_view.Btn_Back, OnBtn_BackClick);
-        AddInputFieldListener(_view.Input_Account, OnInput_AccountChanged);
-        AddInputFieldListener(_view.Input_Password, OnInput_PasswordChanged);
+        AddInputFieldEndEditListener(_view.Input_Account, OnInput_AccountEnd);
+        AddInputFieldEndEditListener(_view.Input_Password, OnInput_PasswordEnd);
     }
 }

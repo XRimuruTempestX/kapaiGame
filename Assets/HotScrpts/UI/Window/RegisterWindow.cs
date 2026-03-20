@@ -3,9 +3,14 @@ using UnityEngine.UI;
 using TMPro;
 using XUIFramework;
 using Cysharp.Threading.Tasks;
+using HallWorld;
 
 public partial class RegisterWindow
 {
+
+    private string account;
+    private string password;
+    
     #region 生命周期
 
     public override async UniTask PlayOpenAnimation()
@@ -45,6 +50,7 @@ public partial class RegisterWindow
     private void OnBtn_RegisterClick(Button btn)
     {
         Debug.Log("Btn_Register Clicked");
+        HallWorld.HallWorld.GetExitsLogicCtrl<LoginLogic>().RegisterAccount(account, password).Coroutine();
     }
 
     private void OnBtn_BackClick(Button btn)
@@ -55,12 +61,16 @@ public partial class RegisterWindow
     }
 
 
-    private void OnInput_AccountChanged(InputField input, string text)
+    private void OnInput_AccountEnd(InputField input, string text)
     {
+        Debuger.LogGreen(text);
+        account =  text;
     }
 
 
-    private void OnInput_PasswordChanged(InputField input, string text)
+    private void OnInput_PasswordEnd(InputField input, string text)
     {
+        Debuger.LogGreen(text);
+        password = text;
     }
 }

@@ -26,3 +26,33 @@ message G2C_TestResponse // IResponse
 {
 	string Tag = 1;
 }
+
+
+//----注册登录 ---------
+
+message C2A_RegisterAccountRequest // IRequest,A2C_RegisterAccountResponse
+{
+	string account = 1;
+	string passWord = 2;
+}
+
+message A2C_RegisterAccountResponse // IResponse
+{
+	int64 userId = 1; //UID
+	string account = 2;
+	string passWord = 3;
+}
+
+message C2A_LoginRequest // IRequest,A2C_LoginResponse
+{
+	string account = 1;
+	string passWprd = 2;
+}
+
+message A2C_LoginResponse // IResponse
+{
+	string gateIp = 1;
+	int32 gatePor = 2;
+}
+
+//--------END------------------

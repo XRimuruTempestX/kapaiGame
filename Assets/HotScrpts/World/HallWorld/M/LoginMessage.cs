@@ -18,9 +18,20 @@ namespace HallWorld
 		/// <param name="username"></param>
 		/// <param name="password"></param>
 		/// <returns></returns>
-		public async FTask<A2C_RegisterAccountResponse> RegisterAccount(string username, string password)
+		public async FTask<A2C_RegisterAccountResponse> SendRegisterAccount(string username, string password)
 		{
 			return await Runtime.Session.C2A_RegisterAccountRequest(account:username, passWord : password);
+		}
+		
+		/// <summary>
+		/// 发送登录请求
+		/// </summary>
+		/// <param name="username"></param>
+		/// <param name="password"></param>
+		/// <returns></returns>
+		public async FTask<A2C_LoginResponse> SendLogin(string username, string password)
+		{
+			return await Runtime.Session.C2A_LoginRequest(account:username, passWprd : password);
 		}
 
 		public void OnDestroy()

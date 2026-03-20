@@ -58,6 +58,19 @@ namespace Fantasy
 			C2A_LoginRequest_request.passWprd = passWprd;
 			return (A2C_LoginResponse)await session.Call(C2A_LoginRequest_request);
 		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static void A2C_KickOut(this Session session, A2C_KickOut A2C_KickOut_message)
+		{
+			session.Send(A2C_KickOut_message);
+		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static void A2C_KickOut(this Session session, int reason, string message)
+		{
+			using var A2C_KickOut_message = Fantasy.A2C_KickOut.Create();
+			A2C_KickOut_message.reason = reason;
+			A2C_KickOut_message.message = message;
+			session.Send(A2C_KickOut_message);
+		}
 
    }
 }

@@ -31,12 +31,12 @@ Shader "X1/effect/noise/Scene"
 		Offset 0 , 0
 		
 		
-		GrabPass{ }
+		// GrabPass{ }
 
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			#if defined(UNITY_STEREO_INSTANCING_ENABLED) || defined(UNITY_STEREO_MULTIVIEW_ENABLED)
@@ -81,7 +81,7 @@ Shader "X1/effect/noise/Scene"
 				UNITY_VERTEX_OUTPUT_STEREO
 			};
 
-			ASE_DECLARE_SCREENSPACE_TEXTURE( _GrabTexture )
+			ASE_DECLARE_SCREENSPACE_TEXTURE( _CameraOpaqueTexture )
 			uniform sampler2D _TextureSample0;
 			uniform float4 _TextureSample0_ST;
 			uniform float _Scale;
@@ -161,7 +161,7 @@ Shader "X1/effect/noise/Scene"
 				float4 screenPos = i.ase_texcoord3;
 				float4 ase_grabScreenPos = ASE_ComputeGrabScreenPos( screenPos );
 				float4 ase_grabScreenPosNorm = ase_grabScreenPos / ase_grabScreenPos.w;
-				float4 screenColor1 = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_GrabTexture,( appendResult8 + ase_grabScreenPosNorm ).xy);
+				float4 screenColor1 = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_CameraOpaqueTexture,( appendResult8 + ase_grabScreenPosNorm ).xy);
 				float clampResult14 = clamp( temp_output_25_0 , 0.0 , 1.0 );
 				
 				

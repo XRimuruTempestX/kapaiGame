@@ -34,7 +34,7 @@ Shader "X1_UI_FightStart_H"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			

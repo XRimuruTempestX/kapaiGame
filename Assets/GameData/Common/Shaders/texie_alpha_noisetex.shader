@@ -48,7 +48,7 @@ Shader "X1/texie/alpha_noise"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			

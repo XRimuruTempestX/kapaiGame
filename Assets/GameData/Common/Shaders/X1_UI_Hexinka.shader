@@ -47,7 +47,7 @@ Shader "X1/UI/Hexinka"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			

@@ -34,7 +34,7 @@ Shader "X1/hudun"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			

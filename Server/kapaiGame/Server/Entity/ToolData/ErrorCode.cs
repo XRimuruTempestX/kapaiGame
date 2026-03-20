@@ -12,5 +12,14 @@ public  class ErrorCode
     //已经存在该账号
     public const uint ExitAccount = 1002;
     
+    //--------登录
+    //密码错误
+    public const uint LoginPasswordErrorCode = 1003; 
+    //账号不存在
+    public const uint LoginAccountNotExistErrorCode = 1004;
+    
+    //账号已经登录
+    public const uint LoginAccountAlreadyExistErrorCode = 1005;
+    
     //--------END
 }

@@ -3,9 +3,14 @@ using UnityEngine.UI;
 using TMPro;
 using XUIFramework;
 using Cysharp.Threading.Tasks;
+using HallWorld;
 
 public partial class LoginWindow
 {
+
+    private string account;
+    private string password;
+    
     #region 生命周期
 
     public override async UniTask PlayOpenAnimation()
@@ -46,6 +51,7 @@ public partial class LoginWindow
     private void OnBtn_StartGameClick(Button btn)
     {
         Debug.Log("Btn_StartGame Clicked");
+        HallWorld.HallWorld.GetExitsLogicCtrl<LoginLogic>().Login(account, password).Coroutine();
     }
 
 
@@ -89,10 +95,12 @@ public partial class LoginWindow
 
     private void OnInput_AccountChanged(InputField input, string text)
     {
+        account = text;
     }
 
 
     private void OnInput_PasswordChanged(InputField input, string text)
     {
+        password = text;
     }
 }

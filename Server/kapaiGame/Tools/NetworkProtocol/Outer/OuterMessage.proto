@@ -55,4 +55,10 @@ message A2C_LoginResponse // IResponse
 	int32 gatePor = 2;
 }
 
+message A2C_KickOut // IMessage
+{
+	int32 reason = 1;     // 踢人原因
+	string message = 2;   // 提示信息
+}
+
 //--------END------------------

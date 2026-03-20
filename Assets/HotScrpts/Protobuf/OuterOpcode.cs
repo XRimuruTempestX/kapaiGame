@@ -13,5 +13,6 @@ namespace Fantasy
         public const uint A2C_RegisterAccountResponse = 402663186;
         public const uint C2A_LoginRequest = 268445459;
         public const uint A2C_LoginResponse = 402663187;
+        public const uint A2C_KickOut = 134227730;
     }
 }

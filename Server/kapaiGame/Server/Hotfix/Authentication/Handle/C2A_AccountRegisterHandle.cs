@@ -13,7 +13,7 @@ public class C2A_AccountRegisterHandle : MessageRPC<C2A_RegisterAccountRequest, 
     {
 
         AuthenticationComponent authComponent = session.Scene.GetComponent<AuthenticationComponent>();
-        
+
         var data = await authComponent.CreateAccount(request.account,request.passWord);
 
         if (data.errorCode == ErrorCode.Success)

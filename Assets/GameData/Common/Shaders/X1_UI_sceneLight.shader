@@ -31,7 +31,7 @@ Shader "X1_UI_sceneLight"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			#define ASE_ABSOLUTE_VERTEX_POS 1

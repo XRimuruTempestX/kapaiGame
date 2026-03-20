@@ -340,4 +340,48 @@ namespace Fantasy
         [ProtoMember(3)]
         public int gatePor { get; set; }
     }
+    [Serializable]
+    [ProtoContract]
+    public partial class A2C_KickOut : AMessage, IMessage
+    {
+        public static A2C_KickOut Create(bool autoReturn = true)
+        {
+            var a2C_KickOut = MessageObjectPool<A2C_KickOut>.Rent();
+            a2C_KickOut.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                a2C_KickOut.SetIsPool(false);
+            }
+            
+            return a2C_KickOut;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            reason = default;
+            message = default;
+            MessageObjectPool<A2C_KickOut>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.A2C_KickOut; } 
+        [ProtoMember(1)]
+        public int reason { get; set; }
+        [ProtoMember(2)]
+        public string message { get; set; }
+    }
 }

@@ -14,7 +14,7 @@ public static class EnCryHelperComponentSystem
     /// <returns></returns>
     public static string Encryption(this EncryptHelperComponent self, string password)
     {
-        return RSAEncryptHelper.RSAEncrypt(self.privateKey, password);
+        return RSAEncryptHelper.RSAEncrypt(self.publicKey, password);
     }
 
     /// <summary>
@@ -27,7 +27,7 @@ public static class EnCryHelperComponentSystem
     public static bool Decryption(this EncryptHelperComponent self, string password, string encryptedPassword)
     {
 
-        string dePassword = RSAEncryptHelper.RSADecrypt(self.publicKey, encryptedPassword);
+        string dePassword = RSAEncryptHelper.RSADecrypt(self.privateKey, encryptedPassword);
         
         return string.Equals(dePassword, password);
     }

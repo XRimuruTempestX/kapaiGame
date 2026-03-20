@@ -45,7 +45,7 @@ Shader "MS/effect_alpha_cut"
 		Pass
 		{
 			Name "Unlit"
-			Tags { "LightMode"="ForwardBase" }
+			Tags { "LightMode"="UniversalForward" }
 			CGPROGRAM
 
 			
@@ -186,8 +186,8 @@ Shader "MS/effect_alpha_cut"
 /*ASEBEGIN
 Version=18707
 86;92;1446;736;2563.668;1082.113;1.6;True;True
-Node;AmplifyShaderEditor.CommentaryNode;63;-1871.083,-378.937;Inherit;False;1948.578;530.9781;NoiseTex;8;3;64;88;89;90;91;93;154;遮罩图;1,1,1,1;0;0
-Node;AmplifyShaderEditor.CommentaryNode;58;-1860.161,-1107.978;Inherit;False;1954.908;656.9279;NoiseTex;12;41;43;42;17;11;14;60;19;147;149;150;151;噪波图;1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;63;-1871.083,-378.937;Inherit;False;1948.578;530.9781;NoiseTex;8;3;64;88;89;90;91;93;154;遮罩�?1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;58;-1860.161,-1107.978;Inherit;False;1954.908;656.9279;NoiseTex;12;41;43;42;17;11;14;60;19;147;149;150;151;噪波�?1,1,1,1;0;0
 Node;AmplifyShaderEditor.Vector4Node;87;-2128.565,-275.5956;Inherit;False;Property;_Mask_Tiling_Offset;Mask_Tiling_Offset;12;0;Create;True;0;0;False;0;False;1,1,0,0;1,1,0,0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.DynamicAppendNode;88;-1859.484,-280.5881;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.DynamicAppendNode;89;-1809.762,-163.4775;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
@@ -198,7 +198,7 @@ Node;AmplifyShaderEditor.DynamicAppendNode;43;-1547.271,-800.4835;Inherit;False;
 Node;AmplifyShaderEditor.Vector2Node;17;-1109.553,-812.6719;Inherit;False;Property;_NoiseSpeed;NoiseSpeed;8;0;Create;True;0;0;False;0;False;0,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.TextureCoordinatesNode;11;-1370.306,-881.2845;Inherit;False;0;-1;4;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.CommentaryNode;51;-2092.192,-1675.32;Inherit;False;2184.617;540.2427;MainTex;13;130;129;128;127;126;125;44;54;37;2;55;53;52;主图;1,1,1,1;0;0
-Node;AmplifyShaderEditor.CommentaryNode;66;-594.5558,229.7383;Inherit;False;669.5709;420.2796;vertexColor;4;25;67;68;40;顶点色;1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;66;-594.5558,229.7383;Inherit;False;669.5709;420.2796;vertexColor;4;25;67;68;40;顶点�?1,1,1,1;0;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;154;-1211.269,-351.199;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;-1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.Vector4Node;125;-2040.868,-1517.712;Inherit;False;Property;_Main_Tiling_Offset;Main_Tiling_Offset;2;0;Create;True;0;0;False;0;False;1,1,0,0;1,1,0,0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.PannerNode;14;-908.5677,-943.3177;Inherit;True;3;0;FLOAT2;0,0;False;2;FLOAT2;0,0;False;1;FLOAT;1;False;1;FLOAT2;0

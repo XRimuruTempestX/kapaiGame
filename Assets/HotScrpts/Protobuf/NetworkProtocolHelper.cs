@@ -71,6 +71,31 @@ namespace Fantasy
 			A2C_KickOut_message.message = message;
 			session.Send(A2C_KickOut_message);
 		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static async FTask<Gate2C_UserDataResponse> C2Gate_LoginRequest(this Session session, C2Gate_LoginRequest C2Gate_LoginRequest_request)
+		{
+			return (Gate2C_UserDataResponse)await session.Call(C2Gate_LoginRequest_request);
+		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static async FTask<Gate2C_UserDataResponse> C2Gate_LoginRequest(this Session session, string account)
+		{
+			using var C2Gate_LoginRequest_request = Fantasy.C2Gate_LoginRequest.Create();
+			C2Gate_LoginRequest_request.account = account;
+			return (Gate2C_UserDataResponse)await session.Call(C2Gate_LoginRequest_request);
+		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static async FTask<Gate2C_GachaCarResponse> C2Gate_GachaCarRequest(this Session session, C2Gate_GachaCarRequest C2Gate_GachaCarRequest_request)
+		{
+			return (Gate2C_GachaCarResponse)await session.Call(C2Gate_GachaCarRequest_request);
+		}
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static async FTask<Gate2C_GachaCarResponse> C2Gate_GachaCarRequest(this Session session, string account, int gachaCarCount)
+		{
+			using var C2Gate_GachaCarRequest_request = Fantasy.C2Gate_GachaCarRequest.Create();
+			C2Gate_GachaCarRequest_request.account = account;
+			C2Gate_GachaCarRequest_request.gachaCarCount = gachaCarCount;
+			return (Gate2C_GachaCarResponse)await session.Call(C2Gate_GachaCarRequest_request);
+		}
 
    }
 }

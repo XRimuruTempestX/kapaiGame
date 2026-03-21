@@ -20,6 +20,10 @@ public  class ErrorCode
     
     //账号已经登录
     public const uint LoginAccountAlreadyExistErrorCode = 1005;
-    
     //--------END
+    
+    //抽卡
+    public const uint GachaFailedErrorCode = 1006;
+    
+    //-----END
 }

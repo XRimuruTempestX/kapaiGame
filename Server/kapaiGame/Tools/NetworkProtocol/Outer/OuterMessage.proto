@@ -61,4 +61,38 @@ message A2C_KickOut // IMessage
 	string message = 2;   // 提示信息
 }
 
+message C2Gate_LoginRequest // IRequest,Gate2C_UserDataResponse
+{
+	string account = 1;
+}
+
+message UserPlayerData
+{
+	string account = 1;
+	int32 coin = 2;
+	int32 diamond = 3;
+	repeated int heroList = 4;
+}
+
+message Gate2C_UserDataResponse // IResponse
+{
+	UserPlayerData userdata = 1;
+}
+
 //--------END------------------
+
+//--------业务-------------------
+
+message C2Gate_GachaCarRequest // IRequest,Gate2C_GachaCarResponse
+{
+	string account = 1;
+	int32 gachaCarCount = 2;
+}
+
+message Gate2C_GachaCarResponse // IResponse
+{
+	repeated int getHeroList = 1;
+	UserPlayerData userData = 2; 
+}
+
+//---------END------------------

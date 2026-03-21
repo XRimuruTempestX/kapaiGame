@@ -14,5 +14,9 @@ namespace Fantasy
         public const uint C2A_LoginRequest = 268445459;
         public const uint A2C_LoginResponse = 402663187;
         public const uint A2C_KickOut = 134227730;
+        public const uint C2Gate_LoginRequest = 268445460;
+        public const uint Gate2C_UserDataResponse = 402663188;
+        public const uint C2Gate_GachaCarRequest = 268445461;
+        public const uint Gate2C_GachaCarResponse = 402663189;
     }
 }

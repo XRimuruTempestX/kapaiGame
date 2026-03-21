@@ -22,7 +22,7 @@ MonoBehaviour:
     uiName: CreateUserWindow
     assetPath: Assets/GameData/HallWorld/Window/CreateUserWindow.prefab
     description: 
-  - uiPrefab: {fileID: 3475569712157740005, guid: 082da79f8327d5d48a2ea64ab088be6b, type: 3}
+  - uiPrefab: {fileID: 2196684023965982545, guid: 75813b2b7697844489489fc773088309, type: 3}
     uiName: GetHeroWindow
     assetPath: Assets/GameData/HallWorld/Window/GetHeroWindow.prefab
     description: 

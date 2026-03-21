@@ -26,7 +26,7 @@ public class C2A_AccountRegisterHandle : MessageRPC<C2A_RegisterAccountRequest, 
         else
         {
             response.ErrorCode = data.errorCode;
-        }
+        } 
         
         await FTask.CompletedTask;
 

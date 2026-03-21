@@ -384,4 +384,241 @@ namespace Fantasy
         [ProtoMember(2)]
         public string message { get; set; }
     }
+    [Serializable]
+    [ProtoContract]
+    public partial class C2Gate_LoginRequest : AMessage, IRequest
+    {
+        public static C2Gate_LoginRequest Create(bool autoReturn = true)
+        {
+            var c2Gate_LoginRequest = MessageObjectPool<C2Gate_LoginRequest>.Rent();
+            c2Gate_LoginRequest.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                c2Gate_LoginRequest.SetIsPool(false);
+            }
+            
+            return c2Gate_LoginRequest;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            account = default;
+            MessageObjectPool<C2Gate_LoginRequest>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.C2Gate_LoginRequest; } 
+        [ProtoIgnore]
+        public Gate2C_UserDataResponse ResponseType { get; set; }
+        [ProtoMember(1)]
+        public string account { get; set; }
+    }
+    [Serializable]
+    [ProtoContract]
+    public partial class UserPlayerData : AMessage, IDisposable
+    {
+        public static UserPlayerData Create(bool autoReturn = true)
+        {
+            var userPlayerData = MessageObjectPool<UserPlayerData>.Rent();
+            userPlayerData.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                userPlayerData.SetIsPool(false);
+            }
+            
+            return userPlayerData;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            account = default;
+            coin = default;
+            diamond = default;
+            heroList.Clear();
+            MessageObjectPool<UserPlayerData>.Return(this);
+        }
+        [ProtoMember(1)]
+        public string account { get; set; }
+        [ProtoMember(2)]
+        public int coin { get; set; }
+        [ProtoMember(3)]
+        public int diamond { get; set; }
+        [ProtoMember(4)]
+        public List<int> heroList { get; set; } = new List<int>();
+    }
+    [Serializable]
+    [ProtoContract]
+    public partial class Gate2C_UserDataResponse : AMessage, IResponse
+    {
+        public static Gate2C_UserDataResponse Create(bool autoReturn = true)
+        {
+            var gate2C_UserDataResponse = MessageObjectPool<Gate2C_UserDataResponse>.Rent();
+            gate2C_UserDataResponse.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                gate2C_UserDataResponse.SetIsPool(false);
+            }
+            
+            return gate2C_UserDataResponse;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            ErrorCode = 0;
+            if (userdata != null)
+            {
+                userdata.Dispose();
+                userdata = null;
+            }
+            MessageObjectPool<Gate2C_UserDataResponse>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.Gate2C_UserDataResponse; } 
+        [ProtoMember(1)]
+        public uint ErrorCode { get; set; }
+        [ProtoMember(2)]
+        public UserPlayerData userdata { get; set; }
+    }
+    [Serializable]
+    [ProtoContract]
+    public partial class C2Gate_GachaCarRequest : AMessage, IRequest
+    {
+        public static C2Gate_GachaCarRequest Create(bool autoReturn = true)
+        {
+            var c2Gate_GachaCarRequest = MessageObjectPool<C2Gate_GachaCarRequest>.Rent();
+            c2Gate_GachaCarRequest.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                c2Gate_GachaCarRequest.SetIsPool(false);
+            }
+            
+            return c2Gate_GachaCarRequest;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            account = default;
+            gachaCarCount = default;
+            MessageObjectPool<C2Gate_GachaCarRequest>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.C2Gate_GachaCarRequest; } 
+        [ProtoIgnore]
+        public Gate2C_GachaCarResponse ResponseType { get; set; }
+        [ProtoMember(1)]
+        public string account { get; set; }
+        [ProtoMember(2)]
+        public int gachaCarCount { get; set; }
+    }
+    [Serializable]
+    [ProtoContract]
+    public partial class Gate2C_GachaCarResponse : AMessage, IResponse
+    {
+        public static Gate2C_GachaCarResponse Create(bool autoReturn = true)
+        {
+            var gate2C_GachaCarResponse = MessageObjectPool<Gate2C_GachaCarResponse>.Rent();
+            gate2C_GachaCarResponse.AutoReturn = autoReturn;
+            
+            if (!autoReturn)
+            {
+                gate2C_GachaCarResponse.SetIsPool(false);
+            }
+            
+            return gate2C_GachaCarResponse;
+        }
+        
+        public void Return()
+        {
+            if (!AutoReturn)
+            {
+                SetIsPool(true);
+                AutoReturn = true;
+            }
+            else if (!IsPool())
+            {
+                return;
+            }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            if (!IsPool()) return; 
+            ErrorCode = 0;
+            getHeroList.Clear();
+            if (userData != null)
+            {
+                userData.Dispose();
+                userData = null;
+            }
+            MessageObjectPool<Gate2C_GachaCarResponse>.Return(this);
+        }
+        public uint OpCode() { return OuterOpcode.Gate2C_GachaCarResponse; } 
+        [ProtoMember(1)]
+        public uint ErrorCode { get; set; }
+        [ProtoMember(2)]
+        public List<int> getHeroList { get; set; } = new List<int>();
+        [ProtoMember(3)]
+        public UserPlayerData userData { get; set; }
+    }
 }

@@ -2,6 +2,8 @@
 using Fantasy.Async;
 using Fantasy.Authentication;
 using Fantasy.Event;
+using Hotfix.Gate.Component;
+using Hotfix.Gate.System;
 using Hotfix.Tools;
 
 namespace Hotfix;
@@ -15,8 +17,11 @@ public sealed class OnSceneCreate_Init : AsyncEventSystem<OnCreateScene>
             case SceneType.Authentication:
                 self.Scene.AddComponent<AuthenticationComponent>();
                 self.Scene.AddComponent<EncryptHelperComponent>();
-                string privateKey;
-                string publicKey;
+                break;
+            case SceneType.Gate:
+                var characterCmp =  self.Scene.AddComponent<CharacterDataComponent>();
+                self.Scene.AddComponent<UserDataComponent>();
+                characterCmp.LoadCharacterConfig();
                 break;
         }
         

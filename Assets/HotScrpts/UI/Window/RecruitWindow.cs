@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using XUIFramework;
 using Cysharp.Threading.Tasks;
+using HallWorld;
 using XAsset.Runtime;
 
 public partial class RecruitWindow
@@ -50,17 +51,19 @@ public partial class RecruitWindow
     private void OnBtn_NormalClick(Button btn)
     {
         Debug.Log("Btn_Normal Clicked");
+        PlayChouKaAnimation(1).Forget();
     }
 
     private void OnBtn_FirendClick(Button btn)
     {
         Debug.Log("Btn_Firend Clicked");
+        PlayChouKaAnimation(5).Forget();
     }
 
     private void OnBtn_SeniorClick(Button btn)
     {
         Debug.Log("Btn_Senior Clicked");
-        PlayChouKaAnimation().Forget();
+        PlayChouKaAnimation(10).Forget();
     }
 
     private void OnBtn_HelpClick(Button btn)
@@ -80,7 +83,7 @@ public partial class RecruitWindow
         Debug.Log("Btn_Jump Clicked");
     }
 
-    private async UniTask PlayChouKaAnimation()
+    private async UniTask PlayChouKaAnimation(int gachaCount)
     {
         _view.Go_Mask.SetActive(true);
         await UIManager.Instance.CloseWindow<HallWindow>();
@@ -95,6 +98,8 @@ public partial class RecruitWindow
         _view.SkeletonGraphic.AnimationState.SetAnimation(0, "idle", true);
         _view.Go_DownHorizationi.SetActive(true);
         _view.Go_Mask.SetActive(false);
+        
+        HallWorld.HallWorld.GetExitsLogicCtrl<GachaCarLogic>().SendCachaLogic(gachaCount).Coroutine();
     }
 
 }

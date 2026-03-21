@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 2705336486403766960}
   - component: {fileID: 2705336486403766962}
   - component: {fileID: 2705336486403766963}
-  - component: {fileID: 4867520536185391989}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: lihui_aiyinsitan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,27 +91,3 @@ MonoBehaviour:
       calculateTangents: 0
       addNormals: 0
       immutableTriangles: 0
---- !u!114 &4867520536185391989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2705336486403766961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 066b4fdf2c430cf47b5cab25f17b77ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Rigidbody: {fileID: 0}
-  m_Collider: {fileID: 0}
-  m_AllPoint:
-  - {fileID: 2705336486403766960}
-  m_AllPointChildCount: 00000000
-  m_AllPointActive: 01
-  m_Pos:
-  - {x: 0, y: 0, z: 0}
-  m_Scale:
-  - {x: 1, y: 1, z: 1}
-  m_Rot:
-  - {x: 0, y: 0, z: 0, w: 1}

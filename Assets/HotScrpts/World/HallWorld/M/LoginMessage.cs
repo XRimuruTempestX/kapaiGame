@@ -34,6 +34,11 @@ namespace HallWorld
 			return await Runtime.Session.C2A_LoginRequest(account:username, passWprd : password);
 		}
 
+		public async FTask<Gate2C_UserDataResponse> GetUserData(string account)
+		{
+			return await Runtime.Session.C2Gate_LoginRequest(account:account);
+		}
+
 		public void OnDestroy()
 		{
 

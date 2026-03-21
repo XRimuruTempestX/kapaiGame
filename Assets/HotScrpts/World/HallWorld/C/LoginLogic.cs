@@ -73,7 +73,7 @@ namespace HallWorld
 						Debuger.LogGreen("登录成功！");
 						Runtime.Session.Dispose();
 						//连接Gate服务器
-						ConnetGateServer(response.gateIp,response.gatePor);
+						ConnetGateServer(response.gateIp,response.gatePor,username);
 						return;
 					}
 			
@@ -90,7 +90,7 @@ namespace HallWorld
 			
 		}
 
-		private async FTask ConnetGateServer(string gateIp, int gatePort)
+		private async FTask ConnetGateServer(string gateIp, int gatePort,string userAccount)
 		{
 			NetWorkManager.Instance.ConnectToServerAsync(gateIp, gatePort, FantasyRuntime.NetworkProtocolType.KCP,onConnectComplete:
 				async () =>
@@ -99,6 +99,9 @@ namespace HallWorld
 					UIManager.Instance.DestroyAllWindows();
 					XAssetFrameWork.Instance.ReleaseAllAssets(false);
 					//弹出大厅
+					var userData =  await loginMessage.GetUserData(userAccount);
+					UserDataData.userData = new UserPlayerData();
+					UserDataData.userData = userData.userdata;
 					await UIManager.Instance.OpenWindowAsync<HallWindow>();
 					await UIManager.Instance.OpenWindowAsync<HallButtonsWidow>();
 				},onConnectDisconnect: () =>

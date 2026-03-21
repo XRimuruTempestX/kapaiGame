@@ -112,7 +112,7 @@ public static class AuthenticationComponentSystem
             }
         
             return (ErrorCode.LoginAccountNotExistErrorCode,null);
-        }
+        } 
         
     }
     

@@ -11,4 +11,5 @@ public class Account : Entity, ISupportedSerialize
     public string password;
     public long createTime;
     
+    public List<CharacterConfig> myCjaracyerList;
 }

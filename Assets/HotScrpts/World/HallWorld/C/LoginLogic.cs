@@ -103,7 +103,8 @@ namespace HallWorld
 					UserDataData.userData = new UserPlayerData();
 					UserDataData.userData = userData.userdata;
 					await UIManager.Instance.OpenWindowAsync<HallWindow>();
-					await UIManager.Instance.OpenWindowAsync<HallButtonsWidow>();
+					var window = await UIManager.Instance.OpenWindowAsync<HallButtonsWidow>();
+					await window.RefButtonState(HallButtonType.MAINCITY);
 				},onConnectDisconnect: () =>
 				{
 					Debuger.LogError("Gate服务器断开链接");

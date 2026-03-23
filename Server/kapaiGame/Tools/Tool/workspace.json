@@ -3,16 +3,11 @@
   "OpenedTabs": [
     {
       "FilePath": "E:\\Unity_G_Project\\kapai\\Server\\KapaiGame\\Tools\\NetworkProtocol\\Outer\\OuterMessage.proto",
-      "CaretOffset": 391,
+      "CaretOffset": 1650,
       "EditorType": 0
-    },
-    {
-      "FilePath": "导出设置",
-      "CaretOffset": 0,
-      "EditorType": 2
     }
   ],
-  "ActiveTabFilePath": "导出设置",
+  "ActiveTabFilePath": "E:\\Unity_G_Project\\kapai\\Server\\KapaiGame\\Tools\\NetworkProtocol\\Outer\\OuterMessage.proto",
   "serverOutputDirectory": "E:\\Unity_G_Project\\kapai\\Server\\kapaiGame\\Server\\Entity",
   "clientOutputDirectory": "E:\\Unity_G_Project\\kapai\\Assets\\HotScrpts\\Protobuf",
   "exportToServer": true,

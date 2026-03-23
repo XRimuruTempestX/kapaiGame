@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 1469630412762655207}
   - component: {fileID: 8276593234647471310}
   - component: {fileID: 2891564758559193377}
-  - component: {fileID: 8562637568208115120}
+  - component: {fileID: 2428532325618416916}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8562637568208115120
+--- !u!114 &2428532325618416916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,9 +247,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 158722009403974811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 5906247521942037327}
+  Nametext: {fileID: 5841244691509794013}
 --- !u!1 &159530031378432791
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +307,7 @@ GameObject:
   - component: {fileID: 796888632995246830}
   - component: {fileID: 5256191495328940796}
   - component: {fileID: 8435760130707453546}
-  - component: {fileID: 3782563174775782523}
+  - component: {fileID: 2106074400877366250}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -372,7 +374,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3782563174775782523
+--- !u!114 &2106074400877366250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,9 +383,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 667309868629000299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 3152667122315018028}
+  Nametext: {fileID: 7002287056707509473}
 --- !u!1 &784856587985676006
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +641,7 @@ GameObject:
   - component: {fileID: 6050440062910966035}
   - component: {fileID: 364953826762541387}
   m_Layer: 5
-  m_Name: '[Button]Retrun'
+  m_Name: Btn_Retrun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -730,8 +734,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: f615ecdbbffd77f4b89afe678ee4d8d5,
-      type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: f615ecdbbffd77f4b89afe678ee4d8d5, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: f615ecdbbffd77f4b89afe678ee4d8d5, type: 3}
     m_DisabledSprite: {fileID: 0}
@@ -925,7 +928,7 @@ GameObject:
   - component: {fileID: 3465741100997988307}
   - component: {fileID: 8404100502502299736}
   - component: {fileID: 2518376855792737202}
-  - component: {fileID: 3616179969002817664}
+  - component: {fileID: 1810587453971465591}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -992,7 +995,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3616179969002817664
+--- !u!114 &1810587453971465591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1001,9 +1004,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2644469841581231986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 4922081315716559137}
+  Nametext: {fileID: 678608431312379339}
 --- !u!1 &2823368119838987098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1064,7 @@ GameObject:
   - component: {fileID: 8867408302257053105}
   - component: {fileID: 5005072978231176187}
   - component: {fileID: 1083238052744587008}
-  - component: {fileID: 7250908325151286824}
+  - component: {fileID: 4188350957120280939}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -1126,7 +1131,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7250908325151286824
+--- !u!114 &4188350957120280939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1135,9 +1140,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3025385832338807412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 8851846564253485848}
+  Nametext: {fileID: 8968239462794303428}
 --- !u!1 &3229424819814950263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,7 +1156,7 @@ GameObject:
   - component: {fileID: 1487779308539895624}
   - component: {fileID: 2341986282111204519}
   - component: {fileID: 5130860652913177893}
-  - component: {fileID: 8289015463340131111}
+  - component: {fileID: 3511038751114572610}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -1216,7 +1223,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8289015463340131111
+--- !u!114 &3511038751114572610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1225,9 +1232,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3229424819814950263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 5409130231952570359}
+  Nametext: {fileID: 2271664721924832828}
 --- !u!1 &3370289147554269430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,7 +1375,7 @@ GameObject:
   - component: {fileID: 696558216598566391}
   - component: {fileID: 1879803184261080376}
   - component: {fileID: 653515820047982325}
-  - component: {fileID: 3209341893490966974}
+  - component: {fileID: 5623899338809579930}
   m_Layer: 5
   m_Name: TenRecruitWindow
   m_TagString: Untagged
@@ -1383,7 +1392,7 @@ RectTransform:
   m_GameObject: {fileID: 3700720547558647004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5965603181063093610}
@@ -1478,7 +1487,7 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &3209341893490966974
+--- !u!114 &5623899338809579930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1487,23 +1496,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3700720547558647004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f2d1a4f7da3154493da3ac5e15c538, type: 3}
+  m_Script: {fileID: 11500000, guid: 52df6e84ee96df344891dd10a3a7d417, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  choukaUI_jiesuanGameObject: {fileID: 5815487520196377138}
-  ItemRootGetHeroCardItemArray:
-  - {fileID: 4223679774841239171}
-  - {fileID: 3782563174775782523}
-  - {fileID: 496058564342351363}
-  - {fileID: 8289015463340131111}
-  - {fileID: 3044803853116223085}
-  - {fileID: 3616179969002817664}
-  - {fileID: 7250908325151286824}
-  - {fileID: 8423014964746948056}
-  - {fileID: 8562637568208115120}
-  - {fileID: 5665889953037053101}
-  RetrunButton: {fileID: 364953826762541387}
-  MaskGameObject: {fileID: 7001484128962386911}
+  m_EditorClassIdentifier: Assembly-CSharp::TenRecruitWindowComponent
+  Go_choukaUI_jiesuan: {fileID: 5815487520196377138}
+  Btn_Retrun: {fileID: 364953826762541387}
+  Go_Mask: {fileID: 7001484128962386911}
+  GetHeroCardItems:
+  - {fileID: 7489356829731933300}
+  - {fileID: 2106074400877366250}
+  - {fileID: 5580010764954040591}
+  - {fileID: 3511038751114572610}
+  - {fileID: 2025879345131549834}
+  - {fileID: 1810587453971465591}
+  - {fileID: 4188350957120280939}
+  - {fileID: 3140536213932462388}
+  - {fileID: 2428532325618416916}
+  - {fileID: 212827329399440463}
 --- !u!1 &3731762091468166260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,7 +1604,7 @@ GameObject:
   - component: {fileID: 4541877683119951139}
   - component: {fileID: 5195760502800451846}
   - component: {fileID: 2560184952617091424}
-  - component: {fileID: 8423014964746948056}
+  - component: {fileID: 3140536213932462388}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -1662,7 +1671,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8423014964746948056
+--- !u!114 &3140536213932462388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1671,9 +1680,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4514192120244896178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 4808556799453351212}
+  Nametext: {fileID: 3830233005510620325}
 --- !u!1 &4792230920417754559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,7 +1696,7 @@ GameObject:
   - component: {fileID: 7582222059425428611}
   - component: {fileID: 2667109283787891097}
   - component: {fileID: 2269620558644525663}
-  - component: {fileID: 4223679774841239171}
+  - component: {fileID: 7489356829731933300}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -1752,7 +1763,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4223679774841239171
+--- !u!114 &7489356829731933300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1761,9 +1772,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4792230920417754559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 6250039862456398750}
+  Nametext: {fileID: 546838653999165301}
 --- !u!1 &4886591083260817226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,7 +1951,7 @@ GameObject:
   - component: {fileID: 5104612860676899041}
   - component: {fileID: 7021848698430367773}
   - component: {fileID: 7458485146635191840}
-  - component: {fileID: 3044803853116223085}
+  - component: {fileID: 2025879345131549834}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -2005,7 +2018,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3044803853116223085
+--- !u!114 &2025879345131549834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2014,9 +2027,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5267978663284085337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 4879589817425977288}
+  Nametext: {fileID: 8372856159718305007}
 --- !u!1 &5663125492468016375
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,7 +2207,7 @@ GameObject:
   - component: {fileID: 9193749393603601307}
   - component: {fileID: 2164747927356072444}
   - component: {fileID: 1089817546446933323}
-  - component: {fileID: 496058564342351363}
+  - component: {fileID: 5580010764954040591}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -2259,7 +2274,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &496058564342351363
+--- !u!114 &5580010764954040591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2268,9 +2283,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6725161131675338928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 6028012989632353033}
+  Nametext: {fileID: 6635128092880854230}
 --- !u!1 &6892960678371463566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,7 +2344,7 @@ GameObject:
   - component: {fileID: 3074443046315713344}
   - component: {fileID: 4830299645120521620}
   m_Layer: 5
-  m_Name: '[GameObject]Mask'
+  m_Name: Go_Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2541,7 +2558,7 @@ GameObject:
   - component: {fileID: 5907451141147555933}
   - component: {fileID: 777695758658599766}
   - component: {fileID: 324609314260479790}
-  - component: {fileID: 5665889953037053101}
+  - component: {fileID: 212827329399440463}
   m_Layer: 5
   m_Name: GetHeroCardItem
   m_TagString: Untagged
@@ -2608,7 +2625,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5665889953037053101
+--- !u!114 &212827329399440463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2617,9 +2634,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8241165292488678997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e70720bdf80bf4d82b9edd5b707482, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d29f02ad1b427f85f697190ff765c4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GetHeroCardItem
+  cardParent: {fileID: 4787632824886642007}
+  Nametext: {fileID: 7666393129449690862}
 --- !u!1 &8259579361222765249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,7 +2762,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 267, y: 516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1637984449629808706
 CanvasRenderer:
@@ -2885,138 +2904,111 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3149917134326308915}
     m_Modifications:
-    - target: {fileID: 880455979868158130, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 880455979868158130, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_Type
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967918, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967918, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_Name
-      value: '[GameObject]choukaUI_jiesuan'
+      value: Go_choukaUI_jiesuan
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910189967918, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910189967918, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910763065323, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910763065323, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910763065323, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910763065323, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_SortingOrder
       value: 202
       objectReference: {fileID: 0}
-    - target: {fileID: 4906664910763065323, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-        type: 3}
+    - target: {fileID: 4906664910763065323, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3028,13 +3020,11 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
 --- !u!224 &5815487520196377137 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 4906664910189967917, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
   m_PrefabInstance: {fileID: 1487096809262841884}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5815487520196377138 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4906664910189967918, guid: 82c5f0522918c97479c6cbd3a0cdb7fd,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 4906664910189967918, guid: 82c5f0522918c97479c6cbd3a0cdb7fd, type: 3}
   m_PrefabInstance: {fileID: 1487096809262841884}
   m_PrefabAsset: {fileID: 0}

@@ -4,8 +4,19 @@ using TMPro;
 using XUIFramework;
 using Cysharp.Threading.Tasks;
 
+
+public enum HallButtonType
+{
+    MAINCITY,
+    HEROS,
+    PVE,
+}
+
 public partial class HallButtonsWidow
 {
+
+    public HallButtonType state = HallButtonType.MAINCITY;
+    
     #region 生命周期
 
     public override async UniTask PlayOpenAnimation()
@@ -21,6 +32,7 @@ public partial class HallButtonsWidow
     public override async UniTask OnOpen(params object[] args)
     {
         await base.OnOpen(args);
+        state = HallButtonType.MAINCITY;
     }
 
     public override async UniTask OnClose()
@@ -45,11 +57,13 @@ public partial class HallButtonsWidow
     private void OnBtn_MainCityClick(Button btn)
     {
         Debug.Log("Btn_MainCity Clicked");
+        RefButtonState(HallButtonType.MAINCITY).Forget();
     }
 
     private void OnBtn_HerosClick(Button btn)
     {
         Debug.Log("Btn_Heros Clicked");
+        RefButtonState(HallButtonType.HEROS).Forget();
     }
 
     private void OnBtn_BackPackClick(Button btn)
@@ -80,6 +94,43 @@ public partial class HallButtonsWidow
     private void OnBtn_ChatClick(Button btn)
     {
         Debug.Log("Btn_Chat Clicked");
+    }
+
+    public async UniTask RefButtonState(HallButtonType btnType = HallButtonType.MAINCITY)
+    {
+        switch (btnType)
+        {
+            case HallButtonType.MAINCITY:
+                if (state != HallButtonType.MAINCITY)
+                {
+                    await UIManager.Instance.OpenWindowAsync<HallWindow>();
+                }
+
+                if (state == HallButtonType.HEROS)
+                {
+                    UIManager.Instance.CloseWindow<HeroListWindow>().Forget();
+                    _view.Btn_Heros.transform.Find("btnSelect").transform.localScale = Vector3.zero;
+                }
+                state = HallButtonType.MAINCITY;
+                _view.Btn_MainCity.transform.Find("btnSelect").transform.localScale = Vector3.one;
+                break;
+            case HallButtonType.HEROS:
+                if (state != HallButtonType.HEROS)
+                {
+                    await UIManager.Instance.OpenWindowAsync<HeroListWindow>();
+                }
+
+                if (state == HallButtonType.MAINCITY)
+                {
+                    UIManager.Instance.CloseWindow<HallWindow>().Forget();
+                    _view.Btn_MainCity.transform.Find("btnSelect").transform.localScale = Vector3.zero;
+                }
+                state = HallButtonType.HEROS;
+                _view.Btn_Heros.transform.Find("btnSelect").transform.localScale = Vector3.one;
+                break;
+            case HallButtonType.PVE:
+                break;
+        }
     }
 
 }

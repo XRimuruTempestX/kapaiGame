@@ -63,6 +63,9 @@ public partial class GetHeroWindow
     {
         if (curGetHeroList.Count <= currIndex)
         {
+            await UIManager.Instance.OpenWindowAsync<TenRecruitWindow>(curGetHeroList);
+            await UniTask.Delay(100);
+            UIManager.Instance.DestroyWindow<GetHeroWindow>();
             return;
         }
 

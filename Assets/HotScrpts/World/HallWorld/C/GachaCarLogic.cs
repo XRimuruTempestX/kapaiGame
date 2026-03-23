@@ -32,6 +32,7 @@ namespace HallWorld
 				//显示对应的UI
 				string jsonMessage = JsonConvert.SerializeObject(response.userData);
 				Debuger.LogRed(jsonMessage);
+				UserDataData.userData = response.userData;
 				GetHeroWindow heroWindow =  await UIManager.Instance.OpenWindowAsync<GetHeroWindow>();
 				await UIManager.Instance.CloseWindow<RecruitWindow>();
 				heroWindow.SetGainHeroList(response.getHeroList);

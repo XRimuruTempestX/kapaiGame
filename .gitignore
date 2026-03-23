@@ -6,6 +6,7 @@
 [Bb]uilds/
 [Ll]ogs/
 UserSettings/
+Assets/StreamingAssets/build_info
 
 # IDE
 .vscode/

@@ -111,6 +111,13 @@ public partial class HallButtonsWidow
                     UIManager.Instance.CloseWindow<HeroListWindow>().Forget();
                     _view.Btn_Heros.transform.Find("btnSelect").transform.localScale = Vector3.zero;
                 }
+                
+                if (state == HallButtonType.PVE)
+                {
+                    UIManager.Instance.CloseWindow<LevelWindow>().Forget();
+                    _view.Btn_PVELevel.transform.Find("btnSelect").transform.localScale = Vector3.zero;
+                }
+                
                 state = HallButtonType.MAINCITY;
                 _view.Btn_MainCity.transform.Find("btnSelect").transform.localScale = Vector3.one;
                 break;
@@ -125,10 +132,37 @@ public partial class HallButtonsWidow
                     UIManager.Instance.CloseWindow<HallWindow>().Forget();
                     _view.Btn_MainCity.transform.Find("btnSelect").transform.localScale = Vector3.zero;
                 }
+                
+                if (state == HallButtonType.PVE)
+                {
+                    UIManager.Instance.CloseWindow<LevelWindow>().Forget();
+                    _view.Btn_PVELevel.transform.Find("btnSelect").transform.localScale = Vector3.zero;
+                }
+                
                 state = HallButtonType.HEROS;
                 _view.Btn_Heros.transform.Find("btnSelect").transform.localScale = Vector3.one;
                 break;
             case HallButtonType.PVE:
+
+                if (state != HallButtonType.PVE)
+                {
+                    await UIManager.Instance.OpenWindowAsync<LevelWindow>();
+                }
+                
+                if (state == HallButtonType.MAINCITY)
+                {
+                    UIManager.Instance.CloseWindow<HallWindow>().Forget();
+                    _view.Btn_MainCity.transform.Find("btnSelect").transform.localScale = Vector3.zero;
+                }
+                if (state == HallButtonType.HEROS)
+                {
+                    UIManager.Instance.CloseWindow<HeroListWindow>().Forget();
+                    _view.Btn_Heros.transform.Find("btnSelect").transform.localScale = Vector3.zero;
+                }
+                
+                state = HallButtonType.PVE;
+                _view.Btn_PVELevel.transform.Find("btnSelect").transform.localScale = Vector3.one;
+                
                 break;
         }
     }

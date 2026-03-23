@@ -12,7 +12,6 @@ Assets/StreamingAssets/build_info
 .vscode/
 .idea/
 *.csproj
-*.sln
 *.unityproj
 *.booproj
 *.svd

@@ -233,7 +233,7 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "2.4.3"
       },
-      "hash": "06dc44e4ebf2928bdb5c9f6a08168d8564af9940"
+      "hash": "dc5201185e34f601034a1fa4e4489c9b03446a8a"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

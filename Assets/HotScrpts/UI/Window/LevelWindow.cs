@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using XUIFramework;
 using Cysharp.Threading.Tasks;
+using HotScrpts.Tools;
 
 public partial class LevelWindow
 {
@@ -45,31 +46,46 @@ public partial class LevelWindow
     private void OnBtn_Level1Click(Button btn)
     {
         Debug.Log("Btn_Level1 Clicked");
+        SelectLevel(0).Forget();
     }
 
     private void OnBtn_Level2Click(Button btn)
     {
         Debug.Log("Btn_Level2 Clicked");
+        SelectLevel(1).Forget();
+
     }
 
     private void OnBtn_Level3Click(Button btn)
     {
         Debug.Log("Btn_Level3 Clicked");
+        SelectLevel(2).Forget();
     }
 
     private void OnBtn_Level4Click(Button btn)
     {
         Debug.Log("Btn_Level4 Clicked");
+        SelectLevel(3).Forget();
     }
 
     private void OnBtn_Level5Click(Button btn)
     {
         Debug.Log("Btn_Level5 Clicked");
+        SelectLevel(4).Forget();
     }
 
     private void OnBtn_Level6Click(Button btn)
     {
         Debug.Log("Btn_Level6 Clicked");
+        SelectLevel(5).Forget();
+    }
+
+
+    private async UniTask SelectLevel(int leveIndex)
+    {
+
+        await UIManager.Instance.OpenWindowAsync<LevelDisplayWindow>(ConfigCenter.Instance.GetLevelConfigList()[leveIndex]);
+
     }
 
 }

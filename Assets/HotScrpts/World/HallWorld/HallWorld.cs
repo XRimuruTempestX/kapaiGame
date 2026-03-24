@@ -9,7 +9,7 @@ namespace HallWorld
 	{
 		public override void OnCreate()
 		{
-			ConfigCenter.Instance.LoadCharacterConfigData().Forget();
+			ConfigCenter.Instance.LoadConfigData().Forget();
 		}
 
 		public override void OnDestroy()

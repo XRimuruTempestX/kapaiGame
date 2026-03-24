@@ -12,14 +12,22 @@ namespace HotScrpts.Tools
     {
     
         public List<CharacterConfig> heroConfigList = new List<CharacterConfig>();
+        
+        public List<LevelConfig> levelConfigList = new List<LevelConfig>();
 
-        public async UniTask LoadCharacterConfigData()
+        public async UniTask LoadConfigData()
         {
             string path = "Assets/GameData/GameConfig/tbherodatacfg.json";
 
             TextAsset json = await XAssetFrameWork.Instance.LoadAssetAsync<TextAsset>(path);
             
             heroConfigList = JsonConvert.DeserializeObject<List<CharacterConfig>>(json.text);
+
+            string path2 = "Assets/GameData/GameConfig/tblevelconfig.json";
+            
+            TextAsset json2 = await XAssetFrameWork.Instance.LoadAssetAsync<TextAsset>(path2);
+            
+            levelConfigList = JsonConvert.DeserializeObject<List<LevelConfig>>(json2.text);
         }
 
         /// <summary>
@@ -29,6 +37,11 @@ namespace HotScrpts.Tools
         public List<CharacterConfig> GetCharacterConfigList()
         {
             return heroConfigList;
+        }
+
+        public List<LevelConfig> GetLevelConfigList()
+        {
+            return levelConfigList;
         }
 
         /// <summary>

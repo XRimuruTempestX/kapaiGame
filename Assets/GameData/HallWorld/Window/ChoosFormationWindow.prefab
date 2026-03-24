@@ -117,7 +117,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.000061035}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &9215984571817095455
 MonoBehaviour:
@@ -399,8 +399,6 @@ GameObject:
   - component: {fileID: 9034142102386144215}
   - component: {fileID: 6812408106052343037}
   - component: {fileID: 3035977425718842682}
-  - component: {fileID: 3196283348821854607}
-  - component: {fileID: 5560444742789647826}
   m_Layer: 5
   m_Name: '[ZMUIIGridView]GoBattleHero'
   m_TagString: Untagged
@@ -466,48 +464,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340769678734060861}
   m_CullTransparentMesh: 0
---- !u!114 &3196283348821854607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340769678734060861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e6e5254941c70d4086cc71414ad88b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loopListView: {fileID: 5560444742789647826}
---- !u!114 &5560444742789647826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340769678734060861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17e9881a7bce8124a8f855b96a8ca11a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mItemPrefabDataList:
-  - mItemPrefab: {fileID: 1725048946341443140}
-    mInitCreateCount: 0
-  mArrangeType: 0
-  mFixedRowOrColumnCount: 5
-  mPadding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  mItemPadding: {x: 3, y: 0}
-  mItemSize: {x: 212, y: 212}
-  mItemRecycleDistance: {x: 50, y: 50}
-  mItemSnapEnable: 0
-  mGridFixedType: 0
-  mViewPortSnapPivot: {x: 0, y: 0}
-  mItemSnapPivot: {x: 0, y: 0}
 --- !u!1 &521232397104249878
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4574024596138947128}
+  - component: {fileID: 5707187079063135227}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -542,8 +499,32 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.0008030792}
-  m_SizeDelta: {x: 1072, y: 1060}
+  m_SizeDelta: {x: 1072, y: 1110.1025}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &5707187079063135227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521232397104249878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
+  m_Padding:
+    m_Left: 49
+    m_Right: 0
+    m_Top: 41
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 77.09, y: 65.01}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &521407371226530727
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +614,7 @@ GameObject:
   - component: {fileID: 6902856575321962764}
   - component: {fileID: 91801802252406261}
   m_Layer: 5
-  m_Name: '[Button]Close'
+  m_Name: Btn_Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1999,8 +1980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7843623618646919822}
   - component: {fileID: 2766583867559921152}
-  - component: {fileID: 2768413761832770527}
-  - component: {fileID: 1204474013867474667}
+  - component: {fileID: 7703404129681338199}
   m_Layer: 5
   m_Name: GoBattleHeroItem#
   m_TagString: Untagged
@@ -2034,8 +2014,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 212, y: 212}
+  m_AnchoredPosition: {x: 49, y: -41}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &2766583867559921152
 CanvasRenderer:
@@ -2045,7 +2025,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725048946341443140}
   m_CullTransparentMesh: 0
---- !u!114 &2768413761832770527
+--- !u!114 &7703404129681338199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2054,28 +2034,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1725048946341443140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f365c062a43eddc4fbd062879eb052ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 07c2e0b7656e4d01b987ba344ed7bc24, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  choosedBgGameObject: {fileID: 6200459915164080788}
-  iconButton: {fileID: 2360468340499998617}
-  attributeImage: {fileID: 1930953992278884905}
-  starImage: {fileID: 5271115089303593412}
-  lvText: {fileID: 4508842817695519313}
-  HPSlider: {fileID: 8490156171517777407}
-  choosedGameObject: {fileID: 3738732109122862017}
---- !u!114 &1204474013867474667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725048946341443140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0432517adfcb84bb6163d7a44ab8c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotScrpts.UI.GoBattleHeroItem
+  selectIcon: {fileID: 2360468340499998617}
+  heroIcon: {fileID: 5372996225924469500}
+  attribute: {fileID: 1930953992278884905}
+  lv: {fileID: 4508842817695519313}
+  star: {fileID: 5271115089303593412}
+  choosed: {fileID: 3738732109122862017}
 --- !u!1 &1800482622220679783
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,7 +3344,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7950281543507698081}
   - {fileID: 8630651317593778261}
@@ -3385,7 +3352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -40, y: 40.5}
+  m_AnchoredPosition: {x: 16, y: -15}
   m_SizeDelta: {x: 80, y: 81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1458086578545891377
@@ -4350,7 +4317,7 @@ GameObject:
   - component: {fileID: 1907788137051984160}
   - component: {fileID: 7446304405177541308}
   - component: {fileID: 3920933912543688835}
-  - component: {fileID: 7575673228774841176}
+  - component: {fileID: 8042192550593958712}
   m_Layer: 5
   m_Name: ChoosFormationWindow
   m_TagString: Untagged
@@ -4367,7 +4334,7 @@ RectTransform:
   m_GameObject: {fileID: 5579191096139181630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1888612276705619369}
@@ -4463,7 +4430,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &7575673228774841176
+--- !u!114 &8042192550593958712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4472,13 +4439,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5579191096139181630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bff847ea0dcebfb4da8b4766d17d39b2, type: 3}
+  m_Script: {fileID: 11500000, guid: b49e24dc9d3b86446bc3d55973b59f0c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  GoBattleHeroZMUIIGridView: {fileID: 3196283348821854607}
-  NoHeroGameObject: {fileID: 8829334057942435848}
-  StartFightButton: {fileID: 7299829897002031432}
-  CloseButton: {fileID: 6902856575321962764}
+  m_EditorClassIdentifier: Assembly-CSharp::ChoosFormationWindowComponent
+  Btn_StartFight: {fileID: 7299829897002031432}
+  Btn_Close: {fileID: 6902856575321962764}
+  goBattleHeroItem: {fileID: 1725048946341443140}
+  content: {fileID: 521232397104249878}
 --- !u!1 &5631598857465283944
 GameObject:
   m_ObjectHideFlags: 0
@@ -5092,7 +5059,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7843623618646919822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5601,7 +5568,7 @@ GameObject:
   - component: {fileID: 7299829897002031432}
   - component: {fileID: 85933720762545370}
   m_Layer: 5
-  m_Name: '[Button]StartFight'
+  m_Name: Btn_StartFight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5694,8 +5661,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 22a363a0a33620f419259e82ebf04f91,
-      type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 22a363a0a33620f419259e82ebf04f91, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: 22a363a0a33620f419259e82ebf04f91, type: 3}
     m_DisabledSprite: {fileID: 0}
@@ -6413,8 +6379,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 22a363a0a33620f419259e82ebf04f91,
-      type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 22a363a0a33620f419259e82ebf04f91, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: 22a363a0a33620f419259e82ebf04f91, type: 3}
     m_DisabledSprite: {fileID: 0}
@@ -6591,8 +6556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7171824516727185590, guid: 51065ee778cfed24e9fcf4e5ecc3ef42,
-    type: 3}
+  m_Sprite: {fileID: -7171824516727185590, guid: 51065ee778cfed24e9fcf4e5ecc3ef42, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

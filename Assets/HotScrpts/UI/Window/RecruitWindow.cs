@@ -76,6 +76,7 @@ public partial class RecruitWindow
         Debug.Log("Btn_Close Clicked");
         UIManager.Instance.OpenWindowAsync<HallWindow>().Forget();
         UIManager.Instance.CloseWindow<RecruitWindow>().Forget();
+        XAssetFrameWork.Instance.ReleaseGameObject(chouKaScene);
     }
 
     private void OnBtn_JumpClick(Button btn)

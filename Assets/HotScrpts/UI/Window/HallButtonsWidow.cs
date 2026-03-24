@@ -32,7 +32,7 @@ public partial class HallButtonsWidow
     public override async UniTask OnOpen(params object[] args)
     {
         await base.OnOpen(args);
-        state = HallButtonType.MAINCITY;
+        RefButtonState(HallButtonType.MAINCITY).Forget();
     }
 
     public override async UniTask OnClose()
@@ -74,6 +74,7 @@ public partial class HallButtonsWidow
     private void OnBtn_PVELevelClick(Button btn)
     {
         Debug.Log("Btn_PVELevel Clicked");
+        RefButtonState(HallButtonType.PVE).Forget();
     }
 
     private void OnBtn_CarbonClick(Button btn)
